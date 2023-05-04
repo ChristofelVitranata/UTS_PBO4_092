@@ -1,44 +1,44 @@
-package src;
-using namespace std;
+//package src;
+//using namespace std;
 
-class characterr{
+class Character{
     String nama;
-    int heal;
+    int health;
     String weapon;
     int attackP;
     int mana;
+
     // membuat constructor
-    characteer(string nama, int heal, string weapon, int attackp, int mana){ 
-        nama = nama;
-        heal = heal; 
-        weapon = weapon;
-        attackP = attackp;
-        mana = mana;
-        print(nama);
+    Character(String nama, int health, String weapon, int attackp, int mana){  
+        this.nama = nama;
+        this.health = health; 
+        this.weapon = weapon;
+        this.attackP = attackp;
+        this.mana = mana;
+        print();
     }
     void attack(){
-        this.mana -=5a; 
-        system.out.println(this.nama+" menyerang si sotong");
-        // system.out.println("sotong terkena demage sebanyak "+this.attackP );
-
+        this.mana -= 5; 
+        System.out.println(this.nama+" menyerang si sotong");
+        System.out.println("sotong terkena demage sebanyak "+this.attackP );
     }
-    void demage(int attackP){
-        system.out.println("ucup terkena demage sebanyak" + attackP);
-        this.heal -= attackP;
+    void damage(int attackP){
+        System.out.println("ucup terkena demage sebanyak" + attackP);
+        this.health -= attackP;
     }
     void print(){
-        system.out.println("nama: "+nama);  
-        system.out.println("heal: "+ heal);
-        system.out.println("weapon: "+weapon);
-        system.out.println("attack power: " +attackkP);
-        system.out.println("mana : " +mana);
+        System.out.println("nama: "+nama);  
+        System.out.println("health: "+ health);
+        System.out.println("weapon: "+weapon);
+        System.out.println("attack power: " +attackP);
+        System.out.println("mana : " +mana);
     }
 }
-public class Main{
+public class main{
     public static void main(String[] args) {
-        characterr character1 = new character("ucup",100,"pedang excalibur",5,100);
+        Character character1 = new Character("ucup",100,"pedang excalibur",5,100);
         character1.attack();
-        character1.demage(10);
+        character1.damage(10);
         character1.print();
     }
 }
